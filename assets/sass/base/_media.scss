@@ -1,0 +1,49 @@
+@media (max-width: 1200px) {
+   .popups {
+      &__divider {
+         width: 70px;
+      }
+   }
+   .popup-trigger {
+      padding: 20px 10px;
+      width: 140px;
+   }
+}
+
+@media (max-width: 768px) {
+   .descr__wrapper {
+      width: 100%;
+      padding: 0 20px;
+      text-align: center;
+   }
+   .popups {
+      padding: 100px 0;
+      &__bounce,
+      &__scale,
+      &__flip,
+      &__slide,
+      &__fade,
+      &__rotate {
+         grid-template-columns: 1fr;
+         &-header {
+            justify-content: center;
+         }
+      }
+   }
+   .white-popup {
+      width: 30%;
+   }
+}
+
+@media (max-width: 480px) {
+   .descr__header {
+      font-size: 36px;
+   }
+   .descr__text {
+      font-size: 16px;
+   }
+   .popup-trigger {
+      padding: 15px 15px;
+      width: 140px;
+   }
+}

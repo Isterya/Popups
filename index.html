@@ -4,7 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popups</title>
+    <title>Modal Animations</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
@@ -30,22 +51,22 @@
                 </h2>
                 <div class="popups__item">
                     <div class="popups__item-content">
-                        <a href="#" class="popup-trigger">Bounce to bottom</a>
+                        <a href="#" class="popup-trigger" data-effect="bounce-bottom">Bounce to bottom</a>
                     </div>
                 </div>
                 <div class="popups__item">
                     <div class="popups__item-content">
-                        <a href="#" class="popup-trigger">Bounce to left</a>
+                        <a href="#" class="popup-trigger" data-effect="bounce-left">Bounce to left</a>
                     </div>
                 </div>
                 <div class="popups__item">
                     <div class="popups__item-content">
-                        <a href="#" class="popup-trigger">Bounce to right</a>
+                        <a href="#" class="popup-trigger" data-effect="bounce-right">Bounce to right</a>
                     </div>
                 </div>
                 <div class="popups__item">
                     <div class="popups__item-content">
-                        <a href="#" class="popup-trigger">Bounce to top</a>
+                        <a href="#" class="popup-trigger" data-effect="bounce-top">Bounce to top</a>
                     </div>
                 </div>
             </div>
@@ -58,49 +79,143 @@
                 </h2>
                 <div class="popups__item">
                     <div class="popups__item-content">
-                        <a href="#" class="popup-trigger">Scale In</a>
+                        <a href="#" class="popup-trigger" data-effect="scale-in">Scale In</a>
                     </div>
                 </div>
                 <div class="popups__item">
                     <div class="popups__item-content">
-                        <a href="#" class="popup-trigger">Scale with blur</a>
+                        <a href="#" class="popup-trigger" data-effect="scale-blur">Scale with blur</a>
                     </div>
                 </div>
                 <div class="popups__item">
                     <div class="popups__item-content">
-                        <a href="#" class="popup-trigger">Scale Ta-da</a>
+                        <a href="#" class="popup-trigger" data-effect="scale-tada">Scale Ta-da</a>
                     </div>
                 </div>
             </div>
 
             <div class="popups__divider"></div>
 
-            <div class="popups__3d">
-                <h2 class="popups__3d-header">
-                    3D
+            <div class="popups__flip">
+                <h2 class="popups__flip-header">
+                    Flip
                 </h2>
                 <div class="popups__item">
                     <div class="popups__item-content">
-                        <a href="#" class="popup-trigger">3D cube</a>
+                        <a href="#" class="popup-trigger" data-effect="flip-page">Flip page</a>
                     </div>
                 </div>
                 <div class="popups__item">
                     <div class="popups__item-content">
-                        <a href="#" class="popup-trigger">3D swing</a>
+                        <a href="#" class="popup-trigger" data-effect="flip-bounce">Flip bounce</a>
+                    </div>
+                </div>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="flip-raise">Flip raise</a>
+                    </div>
+                </div>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="flip-newspaper">Flip newspaper</a>
+                    </div>
+                </div>
+            </div>
+            <div class="popups__divider"></div>
+
+            <div class="popups__slide">
+                <h2 class="popups__slide-header">
+                    Slide
+                </h2>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="slide-in-left">Slide In from Left</a>
+                    </div>
+                </div>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="slide-in-right">Slide In from Right</a>
+                    </div>
+                </div>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="slide-in-top">Slide In from Top</a>
+                    </div>
+                </div>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="slide-in-bottom">Slide In from Bottom</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popups__divider"></div>
+
+            <div class="popups__fade">
+                <h2 class="popups__fade-header">
+                    Fade
+                </h2>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="fade-in">Fade In</a>
+                    </div>
+                </div>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="fade-scale">Fade In and Scale</a>
+                    </div>
+                </div>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="fade-blur">Fade In with Blur</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popups__divider"></div>
+
+            <div class="popups__rotate">
+                <h2 class="popups__rotate-header">
+                    Rotate
+                </h2>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="rotate-in">Rotate In</a>
+                    </div>
+                </div>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="rotate-in-down-left">Rotate In Down Left</a>
+                    </div>
+                </div>
+                <div class="popups__item">
+                    <div class="popups__item-content">
+                        <a href="#" class="popup-trigger" data-effect="rotate-in-down-right">Rotate In Down
+                            Right</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="popup" class="white-popup white-popup_fade" data-modal>
-        You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to
-        demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be
-        sorely disappointed.
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__socials">
+                <a href="https://t.me/pathofmicrochel" class="footer__social-link">
+                    <span class="icon-telegram1"></span>
+                </a>
+            </div>
+            <div class="footer__descr">Подписывайтесь на мой telegram ;)</div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+    <div id="popup" class="white-popup">
+        <div class="popup-close">&times;</div>
+        <div class="modal-content" id="modal-content"></div>
     </div>
 
-    <script src="assets/js/script.js">
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

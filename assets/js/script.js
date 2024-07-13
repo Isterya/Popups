@@ -1,60 +1,55 @@
-// const modals = () => {
-//    let btnPressed;
+const modalTexts = {
+   'bounce-bottom': 'This is the bounce bottom text.',
+   'bounce-left': 'This is the bounce left text.',
+   'bounce-right': 'This is the bounce right text.',
+   'bounce-top': 'This is the bounce top text.',
+   'scale-in': 'This is the scale-in text.',
+   'scale-blur': 'This is the scale-blur text.',
+   'scale-tada': 'This is the scale-tada text.',
+   'flip-page': 'This is the flip-page text.',
+   'flip-bounce': 'This is the flip-bounce text.',
+   'flip-raise': 'This is the flip-raise text.',
+   'flip-newspaper': 'This is the flip-newspaper text.',
+   'slide-in-left': 'This is the slide-in-left text.',
+   'slide-in-right': 'This is the slide-in-right text.',
+   'slide-in-top': 'This is the slide-in-top text.',
+   'slide-in-bottom': 'This is the slide-in-bottom text.',
+   'fade-in': 'This is the fade-in text.',
+   'fade-scale': 'This is the fade-scale text.',
+   'fade-blur': 'This is the fade-blur text.',
+   'rotate-in': 'This is the rotate-in text.',
+   'rotate-in-down-left': 'This is the rotate-in-down-left text.',
+   'rotate-in-down-right': 'This is the rotate-in-down-right text.',
+};
 
-//    function bindModal(triggerSelector, modalSelector, closeSelector) {
-//       const trigger = document.querySelectorAll(triggerSelector),
-//          modal = document.querySelector(modalSelector),
-//          close = document.querySelector(closeSelector),
-//          windows = document.querySelectorAll('[data-modal]');
+const popupTriggers = document.querySelectorAll('.popup-trigger'),
+   popup = document.getElementById('popup'),
+   overlay = document.querySelector('.overlay'),
+   modalContent = document.getElementById('modal-content'),
+   closeBtn = document.querySelector('.popup-close');
 
-//       trigger.forEach((item) => {
-//          item.addEventListener('click', (e) => {
-//             if (e.target) {
-//                e.preventDefault();
-//             }
+popupTriggers.forEach((trigger) => {
+   trigger.addEventListener('click', (e) => {
+      e.preventDefault();
 
-//             btnPressed = true;
+      const effect = trigger.dataset.effect;
+      const text = modalTexts[effect];
 
-//             if (destroy) {
-//                item.remove();
-//             }
+      document.body.style.overflow = 'hidden';
 
-//             windows.forEach((item) => {
-//                item.style.display = 'none';
-//                item.classList.add('animated', 'fadeIn');
-//             });
+      popup.className = 'white-popup';
+      modalContent.innerText = text;
+      popup.classList.add(effect);
 
-//             modal.style.display = 'block';
-//             document.body.style.overflow = 'hidden';
-//             document.body.style.marginRight = `${scroll}px`;
-//          });
-//       });
+      popup.style.display = 'flex';
+      overlay.style.display = 'block';
+   });
+});
 
-//       close.addEventListener('click', (e) => {
-//          windows.forEach((item) => {
-//             item.style.display = 'none';
-//          });
-
-//          modal.style.display = 'none';
-//          document.body.style.overflow = '';
-//          document.body.style.marginRight = `0px`;
-//       });
-
-//       modal.addEventListener('click', (e) => {
-//          if (e.target === modal) {
-//             windows.forEach((item) => {
-//                item.style.display = 'none';
-//                document.body.style.overflow = '';
-//             });
-
-//             modal.style.display = 'none';
-//             document.body.style.overflow = '';
-//             document.body.style.marginRight = `0px`;
-//          }
-//       });
-//    }
-
-//    bindModal('.button-design', '.popup-design', '.popup-design .popup-close');
-//    openByScroll('.fixed-gift');
-//    showModalByTime('.popup-consultation', 60000);
-// };
+document.addEventListener('click', (e) => {
+   if (e.target === overlay || e.target.className.includes('overlay') || e.target === closeBtn) {
+      document.body.style.overflow = '';
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+   }
+});
